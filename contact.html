@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7bcb67526a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <span class="header__logo"><a href="./index.html">
+                <i class="header__icon fa-solid fa-mug-hot fa-2xl"></i></a>
+        </span>
+        <nav>
+            <ul>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="form">
+        <div class="form__container">
+            <h1>Contact us</h1>
+            <form action="./result.html" method="POST">
+                <div class="form__group">
+                    <label for="name">First Name:</label>
+                    <input type="text" id="name" name="name" required minlength="5" maxlength="20">
+                </div>
+
+                <div class="form__group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form__group">
+                    <label for="topic">Topic:</label>
+                    <select id="topic" name="topic" required>
+                        <option value="" disabled selected>Please select a topic...</option>
+                        <option value="booking">Table Booking</option>
+                        <option value="order">Online Orders</option>
+                        <option value="complaint">Complaint</option>
+                    </select>
+                </div>
+
+                <div class="form__group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__left">
+                <i class="fa-solid fa-mug-hot footer__icon fa-2xl"></i>
+                <span class="footer__text">Copyright 2024</span>
+            </div>
+            <div class="footer__right">
+                <a href="#" class="footer__social">
+                    <i class="fa-brands fa-square-instagram fa-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

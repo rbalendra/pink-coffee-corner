@@ -1,0 +1,63 @@
+@use "../partials/mixins" as m;
+@use "../partials/typography" as t;
+@use "../partials/colors";
+
+
+.reviews {
+    background-color: #FAA196;
+    padding: 20px;
+    text-align: center;
+
+    &__title {
+        @include m.title-text(colors.$background, 2.5rem);
+    }
+
+    &__container {
+        @include m.flexbox(center, center, none, 20px);
+        flex-wrap: wrap;
+        margin: auto;
+    }
+}
+
+
+.review {
+    position: relative;
+    padding: 20 40px;
+    max-width: 600px;
+    text-align: center;
+    border: 3px solid white;
+    margin: 0 10px;
+
+    &__text {
+        font-size: 1.4rem;
+        line-height: 1.5;
+        font-style: italic;
+        color: #404040;
+        font-weight: bold;
+        text-align: center;
+        margin: auto;
+        padding: 40px;
+    }
+
+    &__name-date {
+        @include m.flexbox(space-between)
+    }
+
+    &__author {
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    &__date {
+        color: #404040;
+        margin-right: 20px;
+    }
+
+    &__icon--left {
+        @include m.absolute-position(20px, auto, auto, 20px);
+    }
+
+    &__icon--right {
+        @include m.absolute-position(auto, 20px, 60px, auto);
+    }
+}

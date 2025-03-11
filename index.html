@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7bcb67526a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <span class="header__logo">
+            <i class="header__icon fa-solid fa-mug-hot fa-2xl"></i>
+        </span>
+        <nav>
+            <ul>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="hero">
+            <div class="hero__content">
+                <h1>The Pink </br>Coffee Corner</h1>
+                <p class="hero__text">Best coffee in Melbourne</p>
+                <a href="#reviews" class="hero__button">See reviews</a>
+            </div>
+            <div class="hero__image">
+                <img src="./images/hero_image.jpg" alt="Pink Coffee Corner">
+            </div>
+        </section>
+
+        <section class="menu">
+            <h2 class="menu__title">Our Menu</h2>
+            <details class="menu__items">
+                <summary>Food</summary>
+                <div class="cards">
+
+                    <div class="cards__content">
+                        <img src="./images/chocolate_cupcake.jpg" alt="chocolate cupcake">
+                        <h3>Chocolate Cupcake</h3>
+                        <div class="cards__content-label">
+                            <i class="fa-solid fa-leaf"></i>
+                            <span class="cards__text--sm">Vegan Options Available</span>
+                        </div>
+                    </div>
+
+                    <div class="cards__content">
+                        <img src="./images/donuts.jpg" alt="donuts">
+                        <h3>Donuts</h3>
+                        <div class="cards__content-label">
+                            <i class="fa-solid fa-wheat-awn-circle-exclamation"></i>
+                            <span class="cards__text--sm">Gluten Free</span>
+                        </div>
+                    </div>
+
+                    <div class="cards__content">
+                        <img src="./images/raspberry_cupcake.jpg" alt="Raspberry cupcake">
+                        <h3>Raspberry Cupcake</h3>
+                        <div class="cards__content-label">
+                            <i class="fa-solid fa-leaf"></i>
+                            <span class="cards__text--sm">Vegan</span>
+                            <i class="fa-solid fa-wheat-awn-circle-exclamation"></i>
+                            <span class="cards__text--sm">Gluten Free</span>
+                        </div>
+                    </div>
+
+                    <div class="cards__content">
+                        <img src="./images/vanilla_cake.jpg" alt="Vanilla cake">
+                        <h3>Vanilla Cake</h3>
+                        <div class="cards__content-label">
+                            <i class="fa-solid fa-egg"></i>
+                            <span class="cards__text--sm">Contains Eggs</span>
+                        </div>
+                    </div>
+
+                    <div class="cards__content cards__placeholder"></div>
+
+                    <div class="cards__content">
+                        <img src="./images/cheesecake.jpg" alt="cake">
+                        <h3>Cheesecake</h3>
+                        <div class="cards__content-label">
+                            <i class="fa-solid fa-egg"></i>
+                            <span class="cards__text--sm">Contains Eggs</span>
+                            <i class="fa-solid fa-cow"></i>
+                            <span class="cards__text--sm">Contains Diary</span>
+                        </div>
+                    </div>
+
+                </div>
+            </details>
+            </br>
+
+            <details class="menu__items">
+                <summary>Drinks</summary>
+                <div class="cards">
+                    <div class="cards__content">
+                        <img src="./images/coffee.jpg" alt="coffee">
+                        <h3>Coffee</h3>
+                        <div class="cards__content-label">
+                            <i class="fa-solid fa-leaf"></i>
+                            <span class="cards__text--sm">Vegan Options Available</span>
+                        </div>
+                    </div>
+
+                    <div class="cards__content">
+                        <img src="./images/green_smoothie.jpg" alt=" green_smoothie">
+                        <h3>Green Smoothie</h3>
+                        <div class="cards__content-label">
+                            <i class="fa-solid fa-leaf"></i>
+                            <span class="cards__text--sm">Vegan Options Available</span>
+                        </div>
+                    </div>
+
+                    <div class="cards__content">
+                        <img src="./images/peanut_smoothie.jpg" alt=" peanut_smoothie">
+                        <h3>Peanut Butter Smoothie</h3>
+                        <div class="cards__content-label">
+                            <i class="fa-solid fa-leaf"></i>
+                            <span class="cards__text--sm">Vegan Options Available</span>
+                            <i class="fa-solid fa-hand-dots"></i>
+                            <p class="cards__text--sm">Contains Nuts</p>
+                        </div>
+                    </div>
+            </details>
+        </section>
+
+
+        <section id="reviews" class="reviews">
+            <h2 class="reviews__title">Reviews</h2>
+            <div class="reviews__container">
+
+                <article class="review">
+                    <blockquote class="review__text">
+                        <span class="review__icon--left">
+                            <i class="fa-solid fa-quote-left fa-xl"></i></span>
+                        <p>The Pink Coffee Corner is amazing! Cozy ambiance, perfect lattes, and friendly staff. The
+                            avocado toast is a must-try. Definitely coming back!</p>
+                        <span class="review__icon--right"><i class="fa-solid fa-quote-right fa-xl"></i></span>
+                    </blockquote>
+
+                    <div class="review__name-date">
+                        <p class="review__author">-Sarah L.</p>
+                        <p class="review__date">8th July 2024</p>
+                    </div>
+                </article>
+
+                <article class="review">
+                    <blockquote class="review__text">
+                        <span class="review__icon--left">
+                            <i class="fa-solid fa-quote-left fa-xl"></i></span>
+                        <p>The Pink Coffee Corner is my favorite! Perfect mocha, tasty almond croissant,
+                            and a welcoming atmosphere. Free Wi-Fi is a bonus. Can't wait to return!</p>
+                        <span class="review__icon--right"><i class="fa-solid fa-quote-right fa-xl"></i></span>
+                    </blockquote>
+
+                    <div class="review__name-date">
+                        <p class="review__author">- Jenny B.</p>
+                        <p class="review__date">4th June 2023</p>
+                    </div>
+                </article>
+
+
+                <article class="review">
+                    <blockquote class="review__text">
+                        <span class="review__icon--left">
+                            <i class="fa-solid fa-quote-left fa-xl"></i></span>
+                        <p>Great spot for coffee lovers. Smooth flat white and delicious cake. It can get crowded
+                            at lunchtime, but worth the visit for the quality and friendly service.</p>
+                        <span class="review__icon--right"><i class="fa-solid fa-quote-right fa-xl"></i></span>
+                    </blockquote>
+                    <div class="review__name-date">
+                        <p class="review__author">- John M.</p>
+                        <p class="review__date">8th July 2024</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__left">
+                <i class="fa-solid fa-mug-hot footer__icon fa-2xl"></i>
+                <span class="footer__text">Copyright 2024</span>
+            </div>
+            <div class="footer__right">
+                <a href="#" class="footer__social">
+                    <i class="fa-brands fa-square-instagram fa-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

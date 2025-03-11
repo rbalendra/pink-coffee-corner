@@ -1,0 +1,43 @@
+@use "../partials/colors";
+@use "../partials/mixins" as m;
+
+.cards {
+    @include m.flexbox(space-between, flex-start, row, 30px);
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 20px;
+
+
+    &__content {
+        @include m.flexbox(center, center, column);
+        max-width: 400px;
+        flex-grow: 1;
+        background-color: colors.$tertiary;
+        padding: 15px;
+
+        img {
+            @include m.card-image(300px, 300px, 2px, cover)
+        }
+
+        &-label {
+            @include m.flexbox(center, center, none, 10px);
+            padding: 10px;
+
+            i {
+                color: colors.$secondary;
+            }
+        }
+    }
+
+    &__placeholder {
+        visibility: hidden;
+        max-width: 500px;
+    }
+
+    &__text {
+        &--sm {
+            font-size: 1em;
+            color: colors.$text;
+        }
+    }
+}

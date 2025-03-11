@@ -1,0 +1,26 @@
+@use './partials/normalize';
+@use './partials/colors';
+@use './partials/typography' as t;
+@use './sections/header';
+@use './sections/about';
+@use './sections/menu';
+@use './sections/cards';
+@use './sections/hero';
+@use './sections/footer';
+@use './sections/reviews';
+@use './sections/forms';
+
+
+* {
+    box-sizing: border-box;
+}
+
+// html {
+//     scroll-behavior: smooth;
+// }
+
+body {
+    color: #404040;
+    font-family: t.$font-main;
+    font-size: 16px;
+}

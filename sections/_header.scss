@@ -1,0 +1,42 @@
+@use "../partials/colors";
+@use "../partials/typography" as t;
+@use "../partials/mixins" as m;
+
+.header {
+    @include m.flexbox(space-between, center);
+    background-color: colors.$background;
+    padding: 10px;
+
+    &__icon {
+        margin-left: 120px;
+        color: colors.$primary;
+        transform: rotateY(180deg);
+    }
+}
+
+nav {
+    ul {
+        @include m.flexbox(space-between, center);
+        list-style: none;
+        text-decoration: none;
+        margin: 0 10px;
+        padding: 20px;
+
+        li {
+            display: inline-block;
+            margin-left: 50px;
+
+            a {
+                text-decoration: none;
+                color: colors.$text;
+                font-family: t.$font-main;
+                font-size: 1em;
+                font-weight: bold;
+
+                &:hover {
+                    color: colors.$tertiary;
+                }
+            }
+        }
+    }
+}

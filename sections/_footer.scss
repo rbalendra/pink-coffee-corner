@@ -1,0 +1,40 @@
+@use "../partials/colors";
+@use "../partials/mixins" as m;
+
+.footer {
+    background-color: colors.$footer;
+    padding: 30px;
+    color: colors.$background;
+
+    &__content {
+        @include m.flexbox(space-between, center);
+        margin: 0 50px;
+    }
+
+    &__left {
+        @include m.flexbox(none, center, none, 10px);
+    }
+
+    &__icon {
+        transform: rotateY(180deg);
+    }
+
+    &__text {
+        font-size: 1.2rem;
+    }
+
+    &__right {
+        @include m.flexbox(none, center);
+    }
+
+    &__social {
+        i {
+            color: colors.$background;
+            transition: 0.3s ease;
+
+            &:hover {
+                color: colors.$tertiary;
+            }
+        }
+    }
+}

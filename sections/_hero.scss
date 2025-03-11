@@ -1,0 +1,39 @@
+@use "../partials/colors";
+@use "../partials/typography" as t;
+@use "../partials/mixins" as m;
+
+.hero {
+    @include m.flexbox(space-between, stretch);
+    background-color: colors.$secondary;
+
+    h1 {
+        @include m.title-text(colors.$background, 4rem);
+    }
+
+    &__image {
+        img {
+            @include m.card-image(100%, 100%, 1px);
+        }
+    }
+
+    &__content {
+        @include m.flexbox(center, flex-start, column);
+        margin: auto;
+        color: colors.$background;
+    }
+
+    &__text {
+        font-size: 1.5em;
+    }
+
+    &__button {
+
+
+        @include m.button(transparent, colors.$background,
+            colors.$background, colors.$background,
+            colors.$secondary,
+            $width: 180px,
+            $padding: 10px 20px,
+            $font-size: 1.2em);
+    }
+}

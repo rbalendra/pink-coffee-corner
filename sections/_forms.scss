@@ -1,0 +1,77 @@
+@use '../partials/mixins' as m;
+@use '../partials/typography' as t;
+@use '../partials/colors';
+
+.form {
+    @include m.flexbox(center, center, column);
+    background-color: colors.$secondary;
+    padding: 20px;
+    height: 100vh;
+
+
+
+    & h1 {
+        @include m.title-text(colors.$background);
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+.form__container {
+    width: 100%;
+    max-width: 500px;
+    @include m.flexbox(column, center, column);
+    border: 1px solid colors.$background;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+
+
+
+
+
+.form__group {
+    margin-bottom: 30px;
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+        color: colors.$background;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        border: 2px solid colors.$background;
+        background: colors.$background;
+
+
+        &::placeholder {
+            color: colors.$background;
+        }
+    }
+
+    textarea {
+        resize: vertical;
+    }
+}
+
+
+#topic {
+    color: colors.$background;
+    background-color: colors.$secondary;
+}
+
+button {
+    @include m.button(transparent, colors.$background,
+        colors.$background, colors.$background,
+        colors.$secondary,
+        $width: 350px,
+        $padding: 10px 20px,
+        $font-size: 1.6em);
+}
