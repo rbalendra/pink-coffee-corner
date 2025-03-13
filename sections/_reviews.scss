@@ -3,61 +3,108 @@
 @use "../partials/colors";
 
 
-.reviews {
-    background-color: #FAA196;
-    padding: 20px;
-    text-align: center;
+// .reviews {
+//     background-color: #FAA196;
+//     padding: 20px;
+//     text-align: center;
 
-    &__title {
-        @include m.title-text(colors.$background, 2.5rem);
-    }
+//     &__title {
+//         @include m.title-text(colors.$background, 2.5rem);
+//     }
 
-    &__container {
-        @include m.flexbox(center, center, none, 20px);
-        flex-wrap: wrap;
-        margin: auto;
-    }
+//     &__container {
+//         @include m.flexbox(center, center, none, 20px);
+//         flex-wrap: wrap;
+//         margin: auto;
+//     }
+// }
+
+
+// .review {
+//     position: relative;
+//     padding: 20 40px;
+//     max-width: 600px;
+//     text-align: center;
+//     border: 3px solid white;
+//     margin: 0 10px;
+
+//     &__text {
+//         font-size: 1.4rem;
+//         line-height: 1.5;
+//         font-style: italic;
+//         color: #404040;
+//         font-weight: bold;
+//         text-align: center;
+//         margin: auto;
+//         padding: 40px;
+//     }
+
+//     &__name-date {
+//         @include m.flexbox(space-between)
+//     }
+
+//     &__author {
+//         font-weight: bold;
+//         margin-left: 20px;
+//     }
+
+//     &__date {
+//         color: #404040;
+//         margin-right: 20px;
+//     }
+
+//     &__icon--left {
+//         @include m.absolute-position(20px, auto, auto, 20px);
+//     }
+
+//     &__icon--right {
+//         @include m.absolute-position(auto, 20px, 60px, auto);
+//     }
+// }
+
+
+#reviews {
+    background-color: colors.$primary;
+    width: 100%;
+    @include m.flexbox(center, center, column);
 }
 
-
-.review {
-    position: relative;
-    padding: 20 40px;
-    max-width: 600px;
+#reviews article {
+    border: 2px solid white;
+    width: 40%;
+    padding: 26px;
     text-align: center;
-    border: 3px solid white;
-    margin: 0 10px;
+    @include m.flexbox(space-between, none, column, 12px);
 
-    &__text {
-        font-size: 1.4rem;
-        line-height: 1.5;
-        font-style: italic;
-        color: #404040;
-        font-weight: bold;
-        text-align: center;
-        margin: auto;
-        padding: 40px;
-    }
+}
 
-    &__name-date {
-        @include m.flexbox(space-between)
-    }
+#reviews h2 {
+    @include m.title-text(colors.$background, 2.5rem);
+    padding: 20px;
+}
 
-    &__author {
-        font-weight: bold;
-        margin-left: 20px;
-    }
+.review__wrapper {
+    @include m.flexbox(center, none, none, 20px);
+    width: 80%;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 20px;
 
-    &__date {
-        color: #404040;
-        margin-right: 20px;
-    }
+}
 
-    &__icon--left {
-        @include m.absolute-position(20px, auto, auto, 20px);
-    }
+.review__quote {
+    display: flex;
+    font-weight: bold;
+    gap: 6px;
+    font-size: 1.2rem;
+}
 
-    &__icon--right {
-        @include m.absolute-position(auto, 20px, 60px, auto);
-    }
+.fa-quote-right {
+    align-self: flex-end;
+}
+
+.review__author {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }

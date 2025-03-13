@@ -1,43 +1,87 @@
 @use '../partials/mixins' as m;
 @use '../partials/colors';
+@use '../partials/media-queries' as q;
+
 
 .about {
     background-color: colors.$primary;
     padding: 40px 20px;
-    width: 100%;
 
     &__container {
-        margin: 0 auto;
+        margin: auto;
+        max-width: 900px;
+        width: 100%;
+        padding: 20px;
         @include m.flexbox(center, center, column, 20px);
-        padding: 40px;
 
         h1 {
             @include m.title-text(colors.$background, 2.5rem);
-            text-align: center;
             margin-bottom: 40px;
+
+            @include q.tablet {
+                font-size: 4rem;
+                text-align: center
+            }
         }
     }
 
     &__content {
         @include m.flexbox(center, center, column, 40px);
         flex-wrap: wrap;
+
+
     }
 
     &__text {
         flex: 1;
-        min-width: 300px;
-        width: 50%;
         color: colors.$text;
         font-size: 1.5rem;
         line-height: 1.6;
+
+
+        @include q.tablet {
+            background-color: colors.$background;
+            padding: 20px;
+            font-size: 2rem;
+            max-width: 500px;
+            width: 100%;
+            border-radius: 5px;
+
+        }
+
+
+        @include q.large-tablet {
+            padding: 20px;
+            font-size: 1.5rem;
+            width: 100%;
+            max-width: 900px;
+            border-radius: 5px;
+
+        }
+
+
+
+
     }
 
     &__image {
-
+        width: 100%;
         text-align: center;
 
         img {
             border-radius: 5px;
+
+            @include q.tablet {
+                width: 100%;
+            }
+
+            @include q.large-tablet {
+                width: 100%;
+            }
+
+            @include q.laptop {
+                width: 100%;
+            }
 
         }
 
@@ -45,7 +89,6 @@
             color: colors.$background;
             font-style: italic;
             margin-top: 10px;
-            ;
         }
     }
 }

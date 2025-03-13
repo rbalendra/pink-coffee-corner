@@ -352,45 +352,86 @@ template {
   transform: rotateY(180deg);
 }
 
-nav ul {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   gap: 0;
-  list-style: none;
-  text-decoration: none;
-  margin: 0 10px;
+  display: flex;
   padding: 20px;
 }
-nav ul li {
-  display: inline-block;
-  margin-left: 50px;
+.navbar__links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 2;
+  list-style: none;
 }
-nav ul li a {
+.navbar__links li {
+  text-align: center;
+  padding: 15px 0;
+}
+.navbar__links a {
   text-decoration: none;
   color: #404040;
   font-family: "Open Sans", sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: bold;
 }
-nav ul li a:hover {
-  color: #EBC9C4;
+.navbar__links a:hover {
+  color: #FAA196;
+}
+.navbar__links--open, .navbar__menu-toggle:checked + .navbar__hamburger + .navbar__links {
+  display: flex;
+}
+.navbar__hamburger {
+  display: block;
+  cursor: pointer;
+  font-size: 30px;
+  color: #FAA196;
+}
+.navbar__menu-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+@media screen and (min-width: 600px) {
+  .navbar__links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    justify-content: space-between;
+    width: auto;
+    gap: 5em;
+    padding-right: 20px;
+  }
+  .navbar__links li {
+    padding: 0;
+  }
+  .navbar__hamburger, .navbar__menu-toggle {
+    display: none;
+  }
 }
 
 .about {
   background-color: #FAA196;
   padding: 40px 20px;
-  width: 100%;
 }
 .about__container {
-  margin: 0 auto;
+  margin: auto;
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  padding: 40px;
 }
 .about__container h1 {
   font-family: "Rammetto One", sans-serif;
@@ -399,8 +440,13 @@ nav ul li a:hover {
   line-height: 1.8em;
   color: #ffffff;
   margin: 0;
-  text-align: center;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 600px) {
+  .about__container h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
 }
 .about__content {
   display: flex;
@@ -412,17 +458,50 @@ nav ul li a:hover {
 }
 .about__text {
   flex: 1;
-  min-width: 300px;
-  width: 50%;
   color: #404040;
   font-size: 1.5rem;
   line-height: 1.6;
 }
+@media screen and (max-width: 600px) {
+  .about__text {
+    background-color: #ffffff;
+    padding: 20px;
+    font-size: 2rem;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .about__text {
+    padding: 20px;
+    font-size: 1.5rem;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 5px;
+  }
+}
 .about__image {
+  width: 100%;
   text-align: center;
 }
 .about__image img {
   border-radius: 5px;
+}
+@media screen and (max-width: 600px) {
+  .about__image img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .about__image img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .about__image img {
+    width: 100%;
+  }
 }
 .about__image__caption {
   color: #ffffff;
@@ -433,7 +512,7 @@ nav ul li a:hover {
 .menu {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: space-between;
   flex-direction: column;
   gap: 0;
   margin: auto;
@@ -448,6 +527,7 @@ nav ul li a:hover {
   color: #FAA196;
   margin: 0;
   margin: 30px 0;
+  text-align: center;
 }
 .menu__items {
   width: 100%;
@@ -479,8 +559,6 @@ nav ul li a:hover {
   align-items: center;
   flex-direction: column;
   gap: 0;
-  max-width: 400px;
-  flex-grow: 1;
   background-color: #EBC9C4;
   padding: 15px;
 }
@@ -547,7 +625,7 @@ nav ul li a:hover {
 .hero__button {
   background-color: transparent;
   color: #ffffff;
-  border: 2px solid #ffffff;
+  border: 3px solid #ffffff;
   width: 180px;
   padding: 10px 20px;
   font-size: 1.2em;
@@ -604,75 +682,65 @@ nav ul li a:hover {
   color: #EBC9C4;
 }
 
-.reviews {
+#reviews {
   background-color: #FAA196;
-  padding: 20px;
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0;
 }
-.reviews__title {
+
+#reviews article {
+  border: 2px solid white;
+  width: 40%;
+  padding: 26px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: none;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#reviews h2 {
   font-family: "Rammetto One", sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
   line-height: 1.8em;
   color: #ffffff;
   margin: 0;
-}
-.reviews__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: none;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: auto;
+  padding: 20px;
 }
 
-.review {
-  position: relative;
-  padding: 20 40px;
-  max-width: 600px;
-  text-align: center;
-  border: 3px solid white;
-  margin: 0 10px;
-}
-.review__text {
-  font-size: 1.4rem;
-  line-height: 1.5;
-  font-style: italic;
-  color: #404040;
-  font-weight: bold;
-  text-align: center;
-  margin: auto;
-  padding: 40px;
-}
-.review__name-date {
+.review__wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  gap: 0;
+  justify-content: center;
+  align-items: none;
+  flex-direction: none;
+  gap: 20px;
+  width: 80%;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin-bottom: 20px;
 }
-.review__author {
+
+.review__quote {
+  display: flex;
   font-weight: bold;
-  margin-left: 20px;
+  gap: 6px;
+  font-size: 1.2rem;
 }
-.review__date {
-  color: #404040;
-  margin-right: 20px;
+
+.fa-quote-right {
+  align-self: flex-end;
 }
-.review__icon--left {
-  position: absolute;
-  top: 20px;
-  right: auto;
-  bottom: auto;
-  left: 20px;
-}
-.review__icon--right {
-  position: absolute;
-  top: auto;
-  right: 20px;
-  bottom: 60px;
-  left: auto;
+
+.review__author {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .form {
@@ -741,7 +809,7 @@ nav ul li a:hover {
 button {
   background-color: transparent;
   color: #ffffff;
-  border: 2px solid #ffffff;
+  border: 3px solid #ffffff;
   width: 350px;
   padding: 10px 20px;
   font-size: 1.6em;
@@ -759,6 +827,10 @@ button:hover {
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

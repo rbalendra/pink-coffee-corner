@@ -14,16 +14,25 @@
 
 <body>
     <header class="header">
-        <span class="header__logo"><a href="./index.html">
-                <i class="header__icon fa-solid fa-mug-hot fa-2xl"></i></a>
+        <span class="header__logo">
+            <a href="./index.html"> <i class="header__icon fa-solid fa-mug-hot fa-2xl"></i></a>
         </span>
-        <nav>
-            <ul>
+
+
+
+        <nav class="navbar">
+            <input type="checkbox" id="menu-toggle" class="navbar__menu-toggle">
+            <label for="menu-toggle" class="navbar__hamburger" aria-expanded="false" aria-controls="nav-links"
+                aria-label="Open Navigation Menu">
+                &#9776;</label>
+
+            <ul class="navbar__links" aria-hidden="true">
                 <li><a href="./about.html">ABOUT</a></li>
                 <li><a href="./contact.html">CONTACT</a></li>
             </ul>
         </nav>
     </header>
+
 
 
     <main class="form">

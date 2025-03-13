@@ -10,8 +10,8 @@
 
     &__content {
         @include m.flexbox(center, center, column);
-        max-width: 400px;
-        flex-grow: 1;
+        // max-width: 400px;
+        // flex-grow: 1;
         background-color: colors.$tertiary;
         padding: 15px;
 

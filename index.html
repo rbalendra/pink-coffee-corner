@@ -17,8 +17,16 @@
         <span class="header__logo">
             <i class="header__icon fa-solid fa-mug-hot fa-2xl"></i>
         </span>
-        <nav>
-            <ul>
+
+
+
+        <nav class="navbar">
+            <input type="checkbox" id="menu-toggle" class="navbar__menu-toggle">
+            <label for="menu-toggle" class="navbar__hamburger" aria-expanded="false" aria-controls="nav-links"
+                aria-label="Open Navigation Menu">
+                &#9776;</label>
+
+            <ul class="navbar__links" aria-hidden="true">
                 <li><a href="./about.html">ABOUT</a></li>
                 <li><a href="./contact.html">CONTACT</a></li>
             </ul>
@@ -82,7 +90,7 @@
                         </div>
                     </div>
 
-                    <div class="cards__content cards__placeholder"></div>
+                    <!-- <div class="cards__content cards__placeholder"></div> -->
 
                     <div class="cards__content">
                         <img src="./images/cheesecake.jpg" alt="cake">
@@ -133,8 +141,60 @@
             </details>
         </section>
 
-
-        <section id="reviews" class="reviews">
+        <section id="reviews">
+            <h2>Reviews</h2>
+            <div class="review__wrapper">
+                <article>
+                    <div class="review__quote">
+                        <i class="fa-solid fa-quote-left"></i>
+                        <p>
+                            The Pink Coffee Corner is amazing! Cozy
+                            ambiance, perfect lattes, and friendly staff.
+                            The avocado toast is a must-try. Definitely
+                            coming back!
+                        </p>
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                    <div class="review__author">
+                        <p>Sarah L.</p>
+                        <p>8th July 2024</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="review__quote">
+                        <i class="fa-solid fa-quote-left"></i>
+                        <p>
+                            Great spot for coffee lovers. Smooth flat white
+                            and delicious cake. It can get crowded at
+                            lunchtime, but worth the visit for the quality
+                            and friendly service.
+                        </p>
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                    <div class="review__author">
+                        <p>John M.</p>
+                        <p>12th June 2024</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="review__quote">
+                        <i class="fa-solid fa-quote-left"></i>
+                        <p>
+                            The Pink Coffee Corner is my favorite! Perfect
+                            mocha, tasty almond croissant, and a welcoming
+                            atmosphere. Free Wi-Fi is a bonus. Can't wait to
+                            return!
+                        </p>
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                    <div class="review__author">
+                        <p>Jenny P.</p>
+                        <p>8th May 2024</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- <section id="reviews" class="reviews">
             <h2 class="reviews__title">Reviews</h2>
             <div class="reviews__container">
 
@@ -183,7 +243,7 @@
                     </div>
                 </article>
             </div>
-        </section>
+        </section> -->
     </main>
 
 

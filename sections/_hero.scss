@@ -2,6 +2,7 @@
 @use "../partials/typography" as t;
 @use "../partials/mixins" as m;
 
+
 .hero {
     @include m.flexbox(space-between, stretch);
     background-color: colors.$secondary;
@@ -27,7 +28,6 @@
     }
 
     &__button {
-
 
         @include m.button(transparent, colors.$background,
             colors.$background, colors.$background,

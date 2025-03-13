@@ -9,6 +9,7 @@
 @use './sections/footer';
 @use './sections/reviews';
 @use './sections/forms';
+@use './partials/media-queries' as q;
 
 
 * {
@@ -17,6 +18,7 @@
 
 html {
     scroll-behavior: smooth;
+
 }
 
 body {
